@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>kallab's bakery</title>
+	<link rel="icon" type="image/png" href="img/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="css/index.css" rel="stylesheet" />
+	<script src="js/JavaScript.js"></script>
+	
+
+</head>
+
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">Kallab's Bakery</h1>
+								<h6 class="tm-site-description">fresh and well baked</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Contact</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Add this inside the <div class="container"> before the <main> tag -->
+<div class="searchBox">
+    <input class="searchInput" type="text" id="search-bar" oninput="showResults()" placeholder="Search products...">
+    <button class="searchButton" href="#">
+        <i class="material-icons">search</i>
+    </button>
+</div>
+
+		<main>
+			
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Welcome to kallab's bakery</h2>
+				<p class="col-12 text-center">Indulge in our artisanal treats, from delightful pastries to divine cakes. Each bite is a celebration of quality and craftsmanship. Join us for sweet moments of culinary joy!</p>
+				
+			</header>
+			
+			<div class="tm-paging-links">
+				<nav>
+					<ul>
+						<ul>
+							<li class="tm-paging-item"><a href="#bread" class="tm-paging-link active">Bread</a></li>
+							<li class="tm-paging-item"><a href="#cake" class="tm-paging-link">Cake</a></li>
+							<li class="tm-paging-item"><a href="#pastries" class="tm-paging-link">Pastries</a></li>
+						</ul>
+					</ul>
+				</nav>
+			</div>
+			<div class="shopping-cart">
+				<div class="cart-content">
+				  <div class="cart-header">
+					<h2>Your Cart</h2>
+					<button class="close-cart" onclick="closeCart()">&times;</button>
+				  </div>
+				  <ul id="cart-items" class="cart-items"></ul>
+				  <div class="cart-summary">
+					<p class="total-quantity">Total Quantity: <span id="total-quantity">0</span></p>
+					<p class="subtotal">Subtotal: <span id="subtotal">$0.00</span></p>
+					<button class="checkout-btn">Proceed to Checkout</button>
+				  </div>
+				</div>
+			  </div>
+			
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="bread" class="tm-gallery-page">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+						  <img src="img/gallery/01.jpg" alt="Baguette" class="img-fluid tm-gallery-img" />
+						  <figcaption>
+							<h4 class="tm-gallery-title">Baguette</h4>
+							<p class="tm-gallery-description">A classic French bread known for its elongated shape and crisp crust. The interior is soft and chewy, making it a versatile choice for sandwiches or as a side with soups and salads.</p>
+							<p id="price_1" class="tm-gallery-price" data-small-price="18" data-medium-price="25" data-large-price="30">small $18 / medium $25 / large $30</p>
+							<label for="size_1">Size:</label>
+							<select id="size_1">
+								<option value="small">Small</option>
+								<option value="medium">Medium</option>
+								<option value="large">Large</option>
+							</select>
+							<label for="quantity_1">Quantity:</label>
+							<input type="number" id="quantity_1" min="1" placeholder="Enter quantity" required>
+
+							<button data-product-id="1" id="addToBucket_1" onclick="addToBucket(1)">Add to Bucket</button>
+
+							<span id="productName_1" class="add-to-cart-btn">Baguette</span>
+						  </figcaption>
+						</figure>
+					  </article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/02.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Sourdough</h4>
+								<p class="tm-gallery-description">Made with naturally fermented dough, sourdough has a distinctive tangy flavor. Its chewy crust and open crumb structure are the result of a slow fermentation process, creating a hearty and flavorful bread.</p>
+								<p id="price_2" class="tm-gallery-price" data-small-price="18" data-medium-price="25" data-large-price="30">small $18 /medium $25 / large $30</p>
+								<label for="size_2">Size:</label>
+								<select id="size_2">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_2">Quantity:</label>
+								<input type="number" id="quantity_2" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="2" id="addToBucket_2" onclick="addToBucket(2)">Add to Bucket</button>
+								<span id="productName_2" class="tm-gallery-product-name">Sourdough</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Ciabatta</h4>
+								<p class="tm-gallery-description">Hailing from Italy, Ciabatta is characterized by its irregular shape and light, airy texture. With a thin crust and a slightly sweet taste, it's perfect for sandwiches or enjoyed with olive oil and balsamic vinegar.</p>
+								<p id="price_3" class="tm-gallery-price" data-small-price="22" data-medium-price="28" data-large-price="35">small $22 /medium $28 /large $35</p>
+								<label for="size_3">Size:</label>
+								<select id="size_3">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_3">Quantity:</label>
+								<input type="number" id="quantity_3" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="3" id="addToBucket_3" onclick="addToBucket(3)">Add to Bucket</button>
+								<span id="productName_3" class="tm-gallery-product-name">Ciabatta</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Whole Wheat Bread</h4>
+								<p class="tm-gallery-description">Packed with nutrients, whole wheat bread is made from whole wheat flour, offering a nutty flavor and denser texture. It's a healthier choice while still being a delicious option for sandwiches.</p>
+								<p id="price_4" class="tm-gallery-price" data-small-price="17" data-medium-price="22" data-large-price="28">small $17 /medium $22 /large $28</p>
+								<label for="size_4">Size:</label>
+								<select id="size_4">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_4">Quantity:</label>
+								<input type="number" id="quantity_4" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="4" id="addToBucket_4" onclick="addToBucket(4)">Add to Bucket</button>
+								<span id="productName_4" class="tm-gallery-product-name">Whole Wheat Bread</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Rye Bread:</h4>
+								<p class="tm-gallery-description">Rye bread comes in various forms, with dark and light varieties. Known for its earthy and robust flavor, it pairs well with deli meats and is a staple in Eastern European cuisine.</p>
+								<p id="price_5" class="tm-gallery-price" data-small-price="19" data-medium-price="24" data-large-price="29">small $19 /medium $24 /large $29</p>
+								<label for="size_5">Size:</label>
+								<select id="size_5">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_5">Quantity:</label>
+								<input type="number" id="quantity_5" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="5" id="addToBucket_5" onclick="addToBucket(5)">Add to Bucket</button>
+								<span id="productName_5" class="tm-gallery-product-name">Rye Bread:</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Focaccia</h4>
+								<p class="tm-gallery-description">An Italian flatbread, Focaccia is characterized by its olive oil-infused crust and dimpled surface. Toppings like herbs, tomatoes, or olives enhance its savory profile, making it a great accompaniment to meals.</p>
+								<p id="price_6" class="tm-gallery-price" data-small-price="20" data-medium-price="26" data-large-price="32">small $20 /medium $26 /large $32</p>
+								<label for="size_6">Size:</label>
+								<select id="size_6">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_6">Quantity:</label>
+								<input type="number" id="quantity_6" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="6" id="addToBucket_6" onclick="addToBucket(6)">Add to Bucket</button>
+								<span id="productName_6" class="tm-gallery-product-name">Focaccia</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Sed ultricies dui</h4>
+								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
+								<p id="price_7" class="tm-gallery-price" data-small-price="23" data-medium-price="29" data-large-price="36">small $23 /medium $29 /large $36</p>
+								<label for="size_7">Size:</label>
+								<select id="size_7">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_7">Quantity:</label>
+								<input type="number" id="quantity_7" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="7" id="addToBucket_7" onclick="addToBucket(7)">Add to Bucket</button>
+								<span id="productName_7" class="tm-gallery-product-name">Sed ultricies dui</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Brioche</h4>
+								<p class="tm-gallery-description">A rich and buttery bread, Brioche is a French delight. Its high egg and butter content give it a soft, pillowy texture and a subtly sweet taste. Often enjoyed as a breakfast bread or as the base for indulgent desserts.</p>
+								<p id="price_8" class="tm-gallery-price" data-small-price="16" data-medium-price="21" data-large-price="27">small $16 /medium $21 /large $27</p>
+								<label for="size_8">Size:</label>
+								<select id="size_8">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_8">Quantity:</label>
+								<input type="number" id="quantity_8" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="8" id="addToBucket_8" onclick="addToBucket(8)">Add to Bucket</button>
+								<span id="productName_8" class="tm-gallery-product-name">Brioche</span>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 1 -->
+				
+				<!-- gallery page 2 -->
+				<div id="cake" class="tm-gallery-page hidden">
+
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/09.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Vanilla Sponge Cake</h4>
+								<p class="tm-gallery-description">Light and airy, vanilla sponge cake is a versatile delight. Its subtle vanilla essence provides a perfect base for various fillings and frostings, making it a popular choice for celebrations.</p>
+								<p id="price_9" class="tm-gallery-price" data-small-price="25" data-medium-price="30" data-large-price="35">small $25 /medium $30 /large$35</p>
+
+								<label for="size_9">Size:</label>
+								<select id="size_9">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_9">Quantity:</label>
+								<input type="number" id="quantity_9" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="9" id="addToBucket_9" onclick="addToBucket(9)">Add to Bucket</button>
+								<span id="productName_9" class="tm-gallery-product-name">Vanilla Sponge Cake</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/10.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Red Velvet Cake</h4>
+								<p class="tm-gallery-description">Known for its vibrant red color and subtle cocoa flavor, red velvet cake is often layered with cream cheese frosting. Its unique taste and striking appearance make it a favorite for special occasions.</p>
+								<p id="price_10" class="tm-gallery-price" data-small-price="21" data-medium-price="27" data-large-price="33">small $21 /medium $27 /large $33</p>
+								<label for="size_10">Size:</label>
+								<select id="size_10">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_10">Quantity:</label>
+								<input type="number" id="quantity_10" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="10" id="addToBucket_10" onclick="addToBucket(10)">Add to Bucket</button>
+								<span id="productName_10" class="tm-gallery-product-name">Red Velvet Cake</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/11.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Lemon Pound Cake</h4>
+								<p class="tm-gallery-description">Bursting with citrusy goodness, lemon pound cake is a dense and buttery creation with a refreshing lemony zing. It's a delightful choice for those who enjoy a balance of sweet and tart flavors.</p>
+								<p id="price_11" class="tm-gallery-price" data-small-price="27" data-medium-price="34" data-large-price="40">small $27 /medium $34 /large $40</p>
+								<label for="size_11">Size:</label>
+								<select id="size_11">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_11">Quantity:</label>
+								<input type="number" id="quantity_11" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="11" id="addToBucket_11" onclick="addToBucket(11)">Add to Bucket</button>
+								<span id="productName_11" class="tm-gallery-product-name">Lemon Pound Cake</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/12.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Coffee Cake:</h4>
+								<p class="tm-gallery-description">Perfectly paired with a cup of coffee, coffee cake is a crumbly and cinnamon-infused treat. Its streusel topping adds a delightful crunch, making it an ideal companion for brunch or afternoon tea.</p>
+								<p id="price_12" class="tm-gallery-price" data-small-price="24" data-medium-price="31" data-large-price="38">small $24 /medium $31 /large $38</p>
+								<label for="size_12">Size:</label>
+								<select id="size_12">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_12">Quantity:</label>
+								<input type="number" id="quantity_12" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="12" id="addToBucket_12" onclick="addToBucket(12)">Add to Bucket</button>
+								<span id="productName_12" class="tm-gallery-product-name">Coffee Cake:</span>
+							</figcaption>
+						</figure>
+					</article>
+				
+					
+				</div> <!-- gallery page 2 -->
+				
+				<!-- gallery page 3 -->
+				<div id="pastries" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/14.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Croissant</h4>
+								<p class="tm-gallery-description"> French pastry with a flaky, buttery texture, often enjoyed plain or filled with chocolate, ham, or cheese.</p>
+								<p id="price_13" class="tm-gallery-price" data-small-price="26" data-medium-price="33" data-large-price="39">small $26 /medium $33 /large $39</p>
+								<label for="size_13">Size:</label>
+								<select id="size_13">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_13">Quantity:</label>
+								<input type="number" id="quantity_13" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="13" id="addToBucket_13" onclick="addToBucket(13)">Add to Bucket</button>
+								<span id="productName_13" class="tm-gallery-product-name">Croissant</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/15.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Danish Pastry</h4>
+								<p class="tm-gallery-description"> Danish pastries, hailing from Denmark, feature laminated dough with sweet fillings like fruit, custard, or cream cheese, topped with icing</p>
+								<p id="price_14" class="tm-gallery-price" data-small-price="28" data-medium-price="35" data-large-price="42">small $28 /medium $35 /large $42</p>
+								<label for="size_14">Size:</label>
+								<select id="size_14">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_14">Quantity:</label>
+								<input type="number" id="quantity_14" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="14" id="addToBucket_14" onclick="addToBucket(14)">Add to Bucket</button>
+								<span id="productName_14" class="tm-gallery-product-name">Danish Pastry</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/16.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Éclair</h4>
+								<p class="tm-gallery-description"></p>
+								<p id="price_15" class="tm-gallery-price" data-small-price="20.50" data-medium-price="30.25" data-large-price="30.25">small $20.50 /medium $30.25 /large $30.25</p>
+								<label for="size_15">Size:</label>
+								<select id="size_15">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_15">Quantity:</label>
+								<input type="number" id="quantity_15" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="15" id="addToBucket_15" onclick="addToBucket(15)">Add to Bucket</button>
+								<span id="productName_15" class="tm-gallery-product-name">Éclair</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Aliquam sagittis</h4>
+								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								<p id="price_16" class="tm-gallery-price" data-small-price="30.25" data-medium-price="30.25" data-large-price="30.25">small $30.25 /medium $30.25 /large$30.25</p>
+								<label for="size_16">Size:</label>
+								<select id="size_16">
+									<option value="small">Small</option>
+									<option value="medium">Medium</option>
+									<option value="large">Large</option>
+								</select>
+								<label for="quantity_16">Quantity:</label>
+								<input type="number" id="quantity_16" min="1" placeholder="Enter quantity" required>
+								<button data-product-id="16" id="addToBucket_16" onclick="addToBucket(16)">Add to Bucket</button>
+								<span id="productName_16" class="tm-gallery-product-name">Aliquam sagittis</span>
+							</figcaption>
+						</figure>
+					</article>
+					</div> <!-- gallery page 3 -->
+				
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; 2020 kallab 
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const addToBucketButtons = document.querySelectorAll('[id^="addToBucket_"]');
+		const shoppingCart = document.querySelector('.shopping-cart');
+		const closeCartButton = document.querySelector('.close-cart');
+		const cartItemsContainer = document.getElementById('cart-items');
+		const totalQuantityElement = document.getElementById('total-quantity');
+		const subtotalElement = document.getElementById('subtotal');
+		const cart = {};
+
+		addToBucketButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const productId = button.getAttribute('data-product-id');
+				const productTitle = document.getElementById(`productName_${productId}`).textContent;
+				const quantityInput = document.getElementById(`quantity_${productId}`);
+				const sizeInput = document.getElementById(`size_${productId}`);
+				const quantity = parseInt(quantityInput.value) || 0;
+				const price = parseFloat(document.getElementById(`price_${productId}`).getAttribute('data-' + sizeInput.value + '-price'));
+
+				const cartKey = `${productTitle} - ${sizeInput.value}`;
+				if (cart.hasOwnProperty(cartKey)) {
+					cart[cartKey].quantity += quantity;
+				} else {
+					cart[cartKey] = {
+						quantity: quantity,
+						price: price
+					};
+				}
+
+				updateCart();
+			});
+		});
+
+		closeCartButton.addEventListener('click', () => {
+			hideCart();
+		});
+
+		function updateCart() {
+			cartItemsContainer.innerHTML = '';
+			let totalQuantity = 0;
+			let totalSubtotal = 0;
+
+			for (const [cartKey, cartItem] of Object.entries(cart)) {
+				const cartItemElement = document.createElement('li');
+				const [productTitle, size] = cartKey.split(' - ');
+
+				const subtotal = cartItem.quantity * cartItem.price;
+				totalQuantity += cartItem.quantity;
+				totalSubtotal += subtotal;
+
+				cartItemElement.textContent = `${productTitle} - ${size} x ${cartItem.quantity} - Subtotal: $${subtotal.toFixed(2)}`;
+				cartItemsContainer.appendChild(cartItemElement);
+			}
+
+			totalQuantityElement.textContent = totalQuantity;
+			subtotalElement.textContent = isNaN(totalSubtotal) ? '$0.00' : `$${totalSubtotal.toFixed(2)}`;
+
+			showCart();
+		}
+
+		function showCart() {
+			shoppingCart.style.display = 'flex';
+		}
+
+		function hideCart() {
+			shoppingCart.style.display = 'none';
+		}
+
+		function showResults() {
+			const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+			const resultsContainer = document.getElementById('tm-gallery-page-bread');
+
+			document.querySelectorAll('.tm-gallery-page').forEach(page => {
+				page.classList.add('hidden');
+			});
+
+			const productElements = document.querySelectorAll('.tm-gallery-product-name');
+
+			productElements.forEach(productElement => {
+				const parentElement = productElement.closest('.tm-gallery-item');
+				const productName = productElement.textContent.toLowerCase();
+
+				if (productName.includes(searchTerm)) {
+					parentElement.style.display = 'block';
+				} else {
+					parentElement.style.display = 'none';
+				}
+			});
+
+			resultsContainer.classList.remove('hidden');
+		}
+
+		function showGallery(category) {
+			document.querySelectorAll('.tm-gallery-page').forEach(page => page.classList.add('hidden'));
+			document.getElementById(category).classList.remove('hidden');
+
+			document.querySelectorAll('.tm-paging-link').forEach(link => link.classList.remove('active'));
+			document.querySelector(`[href="#${category}"]`).classList.add('active');
+
+			document.getElementById(category).scrollIntoView({
+				behavior: 'smooth',
+			});
+		}
+
+		document.querySelectorAll('.tm-paging-link').forEach(link => {
+			link.addEventListener('click', function (event) {
+				event.preventDefault();
+				const category = this.getAttribute('href').substring(1);
+				showGallery(category);
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>
