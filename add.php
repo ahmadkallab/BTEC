@@ -15,12 +15,12 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         // Collect values from the form
-        $name = $_POST['name'];
+        $pname = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
         
         // Replace with the actual column names in your 'products' table
-        $sqlquery = "INSERT INTO products (column1, column2, column3) VALUES ('$name', '$email', '$message')";
+        $sqlquery = "INSERT INTO products (column1, column2, column3) VALUES ('$pname', '$email', '$message')";
         
         if ($conn->query($sqlquery) == TRUE) {
             echo "Record inserted successfully";
