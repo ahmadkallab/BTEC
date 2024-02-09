@@ -21,7 +21,7 @@
         $ProductCatID = $_REQUEST['catID'];
         
         
-        $sqlquery = "INSERT INTO products (Pname, color, catID) VALUES ('$productName','$ProductColor' , '$ProductCatID' )";
+        $sqlquery = "INSERT INTO products (Pname, color, catID) VALUES ('$name','$email' , '$message' )";
         
         if ($conn->query($sqlquery) == TRUE) {
             echo "record inserted successfully";
