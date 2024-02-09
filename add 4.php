@@ -16,9 +16,9 @@
     
         // collect value of input field
         
-        $productName = $_REQUEST['productName'];
-        $ProductColor = $_REQUEST['productcolor'];
-        $ProductCatID = $_REQUEST['catID'];
+        $name = $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $message = $_REQUEST['message'];
         
         
         $sqlquery = "INSERT INTO products (Pname, color, catID) VALUES ('$name','$email' , '$message' )";
