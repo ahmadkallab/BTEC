@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>kallab's bakery</title>
-	<link rel="icon" type="image/png" href="icon.png">
+	<link rel="icon" type="image/png" href="img/icon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
-	<link href="index.css" rel="stylesheet" />
-	<script src="JavaScript.js"></script>
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+	<link href="css/index.css" rel="stylesheet" />
+	<script src="js/JavaScript.js"></script>
+	
 
 </head>
 
@@ -21,11 +20,11 @@
 	<!-- Top box -->
 		<!-- Logo & Site Name -->
 		<div class="placeholder">
-			<div class="parallax-window" data-parallax="scroll" data-image-src="simple-house-01.jpg">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
-							<img src="simple-house-logo.png" alt="Logo" class="tm-site-logo" /> 
+							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" /> 
 							<div class="tm-site-text-box">
 								<h1 class="tm-site-title">Kallab's Bakery</h1>
 								<h6 class="tm-site-description">fresh and well baked</h6>	
@@ -42,13 +41,13 @@
 				</div>
 			</div>
 		</div>
-		<!-- Add this inside the <div class="container"> before the <main> tag -->
-<div class="searchBox">
-    <input class="searchInput" type="text" id="search-bar" oninput="showResults()" placeholder="Search products...">
-    <button class="searchButton" href="#">
-        <i class="material-icons">search</i>
-    </button>
-</div>
+	
+			<div class="searchBox">
+				<input class="searchInput" type="text" id="search-bar" oninput="showResults()" placeholder="Search products...">
+				<button class="searchButton" href="#" onclick="searchProducts()">
+					<i class="material-icons">search</i>
+				</button>
+			</div>
 
 		<main>
 			
@@ -90,7 +89,7 @@
 				<div id="bread" class="tm-gallery-page">
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-						  <img src="01.jpg" alt="Baguette" class="img-fluid tm-gallery-img" />
+						  <img src="img/gallery/01.jpg" alt="Baguette" class="img-fluid tm-gallery-img" />
 						  <figcaption>
 							<h4 class="tm-gallery-title">Baguette</h4>
 							<p class="tm-gallery-description">A classic French bread known for its elongated shape and crisp crust. The interior is soft and chewy, making it a versatile choice for sandwiches or as a side with soups and salads.</p>
@@ -112,7 +111,7 @@
 					  </article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="02.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/02.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Sourdough</h4>
 								<p class="tm-gallery-description">Made with naturally fermented dough, sourdough has a distinctive tangy flavor. Its chewy crust and open crumb structure are the result of a slow fermentation process, creating a hearty and flavorful bread.</p>
@@ -132,7 +131,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Ciabatta</h4>
 								<p class="tm-gallery-description">Hailing from Italy, Ciabatta is characterized by its irregular shape and light, airy texture. With a thin crust and a slightly sweet taste, it's perfect for sandwiches or enjoyed with olive oil and balsamic vinegar.</p>
@@ -152,7 +151,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Whole Wheat Bread</h4>
 								<p class="tm-gallery-description">Packed with nutrients, whole wheat bread is made from whole wheat flour, offering a nutty flavor and denser texture. It's a healthier choice while still being a delicious option for sandwiches.</p>
@@ -172,7 +171,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Rye Bread:</h4>
 								<p class="tm-gallery-description">Rye bread comes in various forms, with dark and light varieties. Known for its earthy and robust flavor, it pairs well with deli meats and is a staple in Eastern European cuisine.</p>
@@ -192,7 +191,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Focaccia</h4>
 								<p class="tm-gallery-description">An Italian flatbread, Focaccia is characterized by its olive oil-infused crust and dimpled surface. Toppings like herbs, tomatoes, or olives enhance its savory profile, making it a great accompaniment to meals.</p>
@@ -212,7 +211,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Sed ultricies dui</h4>
 								<p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
@@ -232,7 +231,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Brioche</h4>
 								<p class="tm-gallery-description">A rich and buttery bread, Brioche is a French delight. Its high egg and butter content give it a soft, pillowy texture and a subtly sweet taste. Often enjoyed as a breakfast bread or as the base for indulgent desserts.</p>
@@ -257,7 +256,7 @@
 
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="09.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/09.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Vanilla Sponge Cake</h4>
 								<p class="tm-gallery-description">Light and airy, vanilla sponge cake is a versatile delight. Its subtle vanilla essence provides a perfect base for various fillings and frostings, making it a popular choice for celebrations.</p>
@@ -278,7 +277,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="10.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/10.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Red Velvet Cake</h4>
 								<p class="tm-gallery-description">Known for its vibrant red color and subtle cocoa flavor, red velvet cake is often layered with cream cheese frosting. Its unique taste and striking appearance make it a favorite for special occasions.</p>
@@ -298,7 +297,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="11.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/11.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Lemon Pound Cake</h4>
 								<p class="tm-gallery-description">Bursting with citrusy goodness, lemon pound cake is a dense and buttery creation with a refreshing lemony zing. It's a delightful choice for those who enjoy a balance of sweet and tart flavors.</p>
@@ -318,7 +317,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="12.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/12.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Coffee Cake:</h4>
 								<p class="tm-gallery-description">Perfectly paired with a cup of coffee, coffee cake is a crumbly and cinnamon-infused treat. Its streusel topping adds a delightful crunch, making it an ideal companion for brunch or afternoon tea.</p>
@@ -337,14 +336,13 @@
 						</figure>
 					</article>
 				
-					
-				</div> <!-- gallery page 2 -->
+					</div> <!-- gallery page 2 -->
 				
 				<!-- gallery page 3 -->
 				<div id="pastries" class="tm-gallery-page hidden">
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="14.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/14.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Croissant</h4>
 								<p class="tm-gallery-description"> French pastry with a flaky, buttery texture, often enjoyed plain or filled with chocolate, ham, or cheese.</p>
@@ -364,7 +362,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="15.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/15.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Danish Pastry</h4>
 								<p class="tm-gallery-description"> Danish pastries, hailing from Denmark, feature laminated dough with sweet fillings like fruit, custard, or cream cheese, topped with icing</p>
@@ -384,7 +382,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="16.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/16.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Éclair</h4>
 								<p class="tm-gallery-description"></p>
@@ -404,7 +402,7 @@
 					</article>
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Aliquam sagittis</h4>
 								<p class="tm-gallery-description">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -423,15 +421,15 @@
 						</figure>
 					</article>
 					</div> <!-- gallery page 3 -->
-				
+					<div id="search-results"></div>
 		</main>
 
 		<footer class="tm-footer text-center">
 			<p>Copyright &copy; 2020 kallab 
 		</footer>
 	</div>
-	<script src="jquery.min.js"></script>
-<script src="parallax.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+<script src="js/parallax.min.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
 		const addToBucketButtons = document.querySelectorAll('[id^="addToBucket_"]');
@@ -501,28 +499,39 @@
 		}
 
 		function showResults() {
-			const searchTerm = document.getElementById('search-bar').value.toLowerCase();
-			const resultsContainer = document.getElementById('tm-gallery-page-bread');
+        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        const resultsContainer = document.getElementById('tm-gallery-page-bread');
 
-			document.querySelectorAll('.tm-gallery-page').forEach(page => {
-				page.classList.add('hidden');
-			});
+        document.querySelectorAll('.tm-gallery-page').forEach(page => {
+            page.classList.add('hidden');
+        });
 
-			const productElements = document.querySelectorAll('.tm-gallery-product-name');
+        const productElements = document.querySelectorAll('.tm-gallery-product-name');
 
-			productElements.forEach(productElement => {
-				const parentElement = productElement.closest('.tm-gallery-item');
-				const productName = productElement.textContent.toLowerCase();
+        productElements.forEach(productElement => {
+            const parentElement = productElement.closest('.tm-gallery-item');
+            const productName = productElement.textContent.toLowerCase();
 
-				if (productName.includes(searchTerm)) {
-					parentElement.style.display = 'block';
-				} else {
-					parentElement.style.display = 'none';
-				}
-			});
+            if (productName.includes(searchTerm)) {
+                parentElement.style.display = 'block';
+            } else {
+                parentElement.style.display = 'none';
+            }
+        });
 
-			resultsContainer.classList.remove('hidden');
-		}
+        resultsContainer.classList.remove('hidden');
+
+        // Perform AJAX request to your PHP script
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("search-results").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("POST", "your_php_script.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("searchWord=" + searchTerm);
+    }
 
 		function showGallery(category) {
 			document.querySelectorAll('.tm-gallery-page').forEach(page => page.classList.add('hidden'));
@@ -544,7 +553,65 @@
 			});
 		});
 	});
-	
+	document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.tm-contact-form');
+    const searchResultsContainer = document.getElementById('search-results');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const searchValue = formData.get('search');
+
+        if (searchValue.trim() !== '') {
+            fetchSearchResults(searchValue);
+        } else {
+            searchResultsContainer.innerHTML = 'Please enter a product name.';
+        }
+    });
+
+    function fetchSearchResults(searchTerm) {
+        // Use AJAX or fetch to send the search term to the server (add.php) and handle the response
+        // You can update the innerHTML of searchResultsContainer with the search results or a message
+        // based on the response from the server.
+        // For simplicity, I'm using a placeholder message here.
+
+		const placeholderResults = [
+    'Baguette',
+    'Sourdough',
+    'Multigrain',
+    'Ciabatta',
+    'Whole Wheat',
+    'Rye Bread',
+    'Pumpernickel',
+    'Challah',
+    'Focaccia',
+    'Brioche',
+    'Naan',
+    'Pita Bread',
+    'English Muffin',
+    'Cinnamon Swirl',
+    'Bagel',
+    'Kaiser Roll',
+    'French Toast Bread',
+    'Garlic Bread',
+    'Pretzel Bread',
+    'Raisin Bread',
+    'Millet Bread',
+    'Flatbread',
+    'Panettone',
+    // Add more product names as needed
+];
+
+
+        if (placeholderResults.includes(searchTerm)) {
+            searchResultsContainer.innerHTML = 'Product found: ' + searchTerm;
+        } else {
+            searchResultsContainer.innerHTML = 'Product not found.';
+        }
+    }
+});
+
 </script>
 </body>
 </html>
