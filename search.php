@@ -1,8 +1,8 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "store";
+    $servername = "kallabbakery-server.mysql.database.azure.com";
+    $username = "dgadequuds";
+    $password = "4VUACNNA3J3502FX$";
+    $dbname = "kallabbakery-database";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
