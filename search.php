@@ -15,9 +15,9 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         // collect value of input field
-        $searchWord = $_REQUEST['searchWord'];
+        $search-bar = $_REQUEST['search-bar'];
     
-        $sqlquery = "SELECT * FROM products WHERE Pname LIKE '%$searchWord%'";
+        $sqlquery = "SELECT * FROM products WHERE Pname LIKE '%$search-bar%'";
     
         $result = $conn->query($sqlquery);
 
