@@ -42,12 +42,15 @@
 			</div>
 		</div>
 	
+				</div>
+			<form action="search.php" method="post">
 			<div class="searchBox">
 				<input class="searchInput" type="text" id="search-bar" oninput="showResults()" placeholder="Search products...">
 				<button class="searchButton" href="#" onclick="searchProducts()">
 					<i class="material-icons">search</i>
 				</button>
-			</div>
+			</form>
+		</div>
 
 		<main>
 			
@@ -528,7 +531,7 @@
                 document.getElementById("search-results").innerHTML = this.responseText;
             }
         };
-        xhttp.open("POST", "your_php_script.php", true);
+        xhttp.open("POST", "search.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("searchWord=" + searchTerm);
     }
