@@ -17,7 +17,7 @@
         // collect value of input field
         $search-bar = $_REQUEST['search-bar'];
     
-        $sqlquery = "SELECT * FROM products WHERE Pname LIKE '%$search-bar%'";
+        $sqlquery = "SELECT * FROM products WHERE products LIKE '%$search-bar%'";
     
         $result = $conn->query($sqlquery);
 
@@ -26,7 +26,7 @@
             while($row = $result->fetch_assoc()) {
                 echo "id: " . $row["id"]. " - Name: " . $row["Pname"]. " , color: " . $row["color"]. "<br>";
             }
-        } else {
+        } else {            
             echo "0 results";
         }
         $conn->close();
